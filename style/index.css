@@ -1,0 +1,192 @@
+/* General body and html styling */
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure body takes full height */
+    background: radial-gradient(circle, #09094b, #1b3786); /* Radial gradient background */
+    color: #ffffff; /* White text color */
+}
+
+/* Container to hold all content */
+.container {
+ 
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for 3D effect */
+    transform: scale(1); /* Ensure no transformation by default */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Phóng to container lên 105% kích thước gốc */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Tăng cường độ bóng khi di chuột qua */
+}
+
+/* Header styling */
+.header {
+    border-radius: 10px;
+    background: linear-gradient(to right, #a92ea9, #feb47b);
+    padding: 20px;
+    border-bottom: 2px solid #004080; /* Dark blue border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow for 3D effect */
+}
+
+.header h1 {
+    text-align: center; /* Center align the header text */
+    margin: 0;
+    color: #ffffff; /* White text */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Green glow effect */
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center; /* Center the navigation links */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition */
+}
+
+nav ul li a:hover {
+    color: #ff9800; /* Orange color on hover */
+    text-shadow: 0 0 10px #ff9800; /* Orange glow effect */
+}
+
+/* Main content area styling */
+.main-content {
+    flex: 1; /* Take up available space */
+    padding: 20px;
+}
+
+/* Search section styling */
+.search {
+    text-align: center;
+    margin: 20px;
+}
+
+.search input[type="text"],
+.search input[type="number"],
+.search select {
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid #004080; /* Dark blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    font-size: 1em;
+    color: #000000; /* Black text color */
+    background-color: #ffffff; /* White background for inputs */
+}
+
+.search input[type="text"]::placeholder,
+.search input[type="number"]::placeholder {
+    color: #888888; /* Light gray placeholder text */
+}
+
+/* Product list section styling */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the product items */
+    gap: 20px; /* Space between product items */
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #1f1f1f; /* Dark background for product items */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    overflow: hidden;
+    width: 300px; /* Fixed width for product items */
+    text-align: center;
+}
+
+.product-item img {
+    width: 100%; /* Full width for product images */
+    height: auto;
+    border-bottom: 2px solid #004080; /* Dark blue border under image */
+}
+
+.product-details {
+    padding: 10px;
+    
+}
+
+.product-details h3 {
+    margin: 10px 0;
+    color: #ffffff; /* White text color */
+    text-shadow: 0 0 8px #00ff00, 0 0 16px #00ff00; /* Green glow effect */
+}
+
+.product-details p {
+    margin: 5px 0;
+    color: #e0e0e0; /* Light gray text */
+}
+
+.product-details button {
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; /* White glow effect */
+}
+
+.product-details button:hover {
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Footer styling */
+.footer {
+    background: #1f1f1f; /* Dark background for footer */
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #004080; /* Dark blue border */
+    color: #ffffff; /* White text color */
+}
+
+/* Ensure footer is at the bottom of the viewport */
+.footer {
+    
+    
+    border-radius: 10px;
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center; /* Center align product items on small screens */
+    }
+
+    .product-item {
+        width: 90%; /* Full width for product items on small screens */
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="../../style/index.css">
+    <script src="../../script/page/search-filterProduct.js"></script>
+    <script src="../../script/page/goToPage.js"></script>
+    <script src="../../script/cartScript/addToCart.js"></script>
+    <script src="../../script/page/initpage.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Welcome to Our E-Commerce Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="goToPage('../customer/auth/userLogin.html')">User Login</a></li>
+                    <li><a href="#" onclick="goToPage('../customer/auth/userRegister.html')">User Register</a></li>
+                    <li><a href="#" onclick="goToPage('../admin/auth/adminLogin.html')">Admin Login</a></li>
+                    <li><a href="#" onclick="goToPage('../admin/auth/adminRegister.html')">Admin Register</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="search-filter">
+            <input type="text" id="searchInput" placeholder="Search product..." oninput="searchProducts(this.value)">
+            <select  id="categoryFilter" onchange="filterProducts(getFilterCriteria())">
+                <option value="">All Category</option>
+                <option value="category1">Category 1</option>
+                <option value="category2">Category 2</option>
+                <option value="category3">Category 3</option>
+            </select>
+            <input type="number" id="minPrice" placeholder="minPrice" onchange="filterProducts(getFilterCriteria())">
+            <input type="number" id="maxPrice" placeholder="maxPrice" onchange="filterProducts(getFilterCriteria())">
+        <section class="product-list" id="productContainer">
+
+        <footer class="footer">
+            <p>&copy; 2024 Our E-Commerce Platform. All rights reserved.</p>
+        </footer>
+    </div>
+    
+
+
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            const products = JSON.parse(localStorage.getItem('products')) || [];
+            displayProducts(products);
+        });
+    </script>
+
+   
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../../../style/Checkout.css">
+    <script src="../../script/paymentScript/checkOut.js"></script>
+    <script src="../../script/paymentScript/loadCart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Checkout</h2>
+        <div id="cartItems">
+            <!-- JavaScript will dynamically generate the list of items here -->
+        </div>
+        <div id="totalAmount">
+            <!-- JavaScript will display the total amount here -->
+        </div>
+        <form onsubmit="return checkOut();">
+            <input type="submit" value="Proceed to Checkout">
+        </form>
+        
+    </div>
+    <button onclick="window.location.href='../home/index.html'">Home Page</button>
+</body>
+</html>

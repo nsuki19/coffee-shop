@@ -1,0 +1,87 @@
+/* General body and html styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure body takes full height */
+    background: radial-gradient(circle, #00274d, #003f6c); /* Radial gradient background */
+    color: #ffffff; /* White text color */
+}
+
+/* Container to hold all content */
+.container {
+   
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto; /* Center the container */
+    padding: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for 3D effect */
+    transform: scale(1); /* Ensure no transformation by default */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.container:hover {
+    transform: scale(1.05); /* Phóng to container lên 105% kích thước gốc */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Tăng cường độ bóng khi di chuột qua */
+}
+
+/* Title styling */
+h2 {
+    color: #ffffff; /* White text color */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Green glow effect */
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    margin-top: 10px; /* Space above labels */
+}
+
+/* Paragraph styling */
+p {
+    background-color: #1f1f1f; /* Dark background for paragraph */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside paragraphs */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    color: #ffffff; /* White text color */
+    margin: 5px 0 20px 0; /* Margin around paragraphs */
+    width: 100%; /* Full width of container */
+    text-align: center; /* Center align text */
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(135deg, #004080, #00274d); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Adjust padding */
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px; /* Margin between buttons */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; /* White glow effect */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00274d, #004080); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+}

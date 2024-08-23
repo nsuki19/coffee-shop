@@ -1,0 +1,125 @@
+/* General body and html styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Ensure body takes full height */
+    color: #ffffff; /* White text color */
+    background-size: 100%;
+    position: relative;
+       width: 1024px;
+    height: 650px;
+    background-image: url(../ảnh/Brown\ Illustrative\ Cafe\ Back\ to\ Business\ Opening\ Hours\ Cafe\ Banner\(1\).png);
+    background-size: 100%;
+}
+
+
+/* Container to hold all content */
+.container {
+    width: 1920px;
+    /* top: 50%; */
+    left: 35%;
+    position: relative;
+   /* position: absolute; */
+   
+     /* Center the container */
+    padding: 20px;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Deep shadow for 3D effect */
+    transform: scale(1); /* Ensure no transformation by default */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+.container:hover {
+    transform: scale(1.05); /* Phóng to container lên 105% kích thước gốc */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Tăng cường độ bóng khi di chuột qua */
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    color: #ffffff; /* White text color */
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00; /* Green glow effect */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    background: linear-gradient(135deg, #ff5722, #ff9800); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    text-shadow: 0 0 8px #ffffff, 0 0 16px #ffffff; /* White glow effect */
+    margin: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Reverse gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Stronger shadow on hover */
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    margin-bottom: 20px;
+}
+
+/* Form input styling */
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 2px solid #004080; /* Dark blue border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+    font-size: 1em;
+    color: #000000; /* Black text color */
+    background-color: #ffffff; /* White background for inputs */
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+    color: #888888; /* Light gray placeholder text */
+}
+
+/* Label styling */
+label {
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+}
+
+/* Horizontal rule styling */
+hr {
+    border: 1px solid #004080; /* Dark blue border */
+    margin: 20px 0;
+}
+
+/* Product list styling */
+#productList {
+    height: 150px; /* Kích thước cố định cho khu vực danh sách sản phẩm */
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi nội dung vượt quá kích thước */
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #3b2727; /* Màu nền cho khu vực danh sách sản phẩm */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for 3D effect */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%; /* Full width for buttons on small screens */
+    }
+}
